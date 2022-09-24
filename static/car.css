@@ -163,6 +163,7 @@ color: var(--black);
 .footer{
     background: var(--light-yellow);
     margin-top: 1rem;
+    
 }
 
 .footer .credit{

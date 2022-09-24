@@ -1,5 +1,14 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
+window.addEventListener('load', (event) => {
+  let form = document.querySelector('#carsearch');
+  form.addEventListener('submit',e => {
+  e.preventDefault();
+  input = document.querySelector('#formInput');
+  input.value = input.value.trim();
+  form.submit()
+  })
+});
 
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');

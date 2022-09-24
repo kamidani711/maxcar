@@ -8,7 +8,9 @@
     --box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --border:.1rem solid rgba(0,0,0,.1);
 }
-
+section{
+    padding:2rem 3%;
+}
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
@@ -25,51 +27,6 @@ html{
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
 }
-
-section{
-    padding:2rem 9%;
-}
-
-.heading{
-    padding-bottom: 2rem;
-    text-align: center;
-    font-size: 4.5rem;
-    color:var(--black);
-}
-
-.heading span{
-    position: relative;
-    z-index: 0;
-}
-
-.heading span::before{
-    content: '';
-    position: absolute;
-    bottom:1rem; left:0;
-    height: 100%;
-    width: 100%;
-    background: var(--light-yellow);
-    z-index: -1;
-    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
-}
-
-.btn{
-    display: inline-block;
-    margin-top: 1rem;
-    padding:.8rem 3rem;
-    background:var(--light-yellow);
-    color:var(--black);
-    cursor: pointer;
-    font-size: 1.7rem;
-    border-radius: .5rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-.btn:hover{
-    background:var(--yellow);
-}
-
 .header{
     display: flex;
     align-items: center;
@@ -112,6 +69,11 @@ section{
     color:var(--light-color);
     display: none;
 }
+.mainContainer {
+    display: flex;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .newsletter{
     margin-top: 5rem;
     padding:6rem 2rem;
@@ -149,87 +111,69 @@ section{
 .newsletter form input[type="submit"]:hover{
     background: var(--yellow);
 }
-.home{
-    padding-top: 10rem;
-    text-align: center;
-    overflow-x: hidden;
+.searchDiv{
+    margin-top: 10rem;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.carCard{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    gap:1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.carCard>img{
+    width: 80%; 
+}
+.carCard>a{
+    margin: 0;
+    padding: 0; 
+}
+.carDetails{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.carDetails>span:nth-of-type(1){
+    font-size: 2rem;
+    color: rgb(255, 174, 0);
+    margin-top: 1.5rem;
 
-.home h3{
-    color:var(--black);
-    font-size: 7.5vw;
-    text-transform: uppercase;
 }
-
-.home img{
-    width:100%;
-    margin:1rem 0;
+.carDetails>span:nth-of-type(2){
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    letter-spacing: 2;
+    margin-left: 1rem;
 }
-.vehicles .vehicles-slider{
-    padding-bottom: 5rem;
+.carInfoContainer{
+    display: flex;
+    gap:1rem;
+    padding: 0.5rem 0rem 0rem 1rem;
 }
-
-.vehicles .vehicles-slider .box{
-    text-align: center;
+.carInfomartion{
+    display: flex;
+    flex-direction: column;
 }
-
-.vehicles .vehicles-slider .box img{
-    width:100%;
-    transform: scale(.8);
-    opacity: .5;
-}
-
-.vehicles .vehicles-slider .box .content{
-    padding-top: 1rem;
-    transform: scale(0);
-}
-
-.vehicles .vehicles-slider .swiper-slide-active .content{
-    transform: scale(1);
-}
-
-.vehicles .vehicles-slider .swiper-slide-active img{
-    transform: scale(1);    
-    opacity: 1;
-}
-
-.vehicles .vehicles-slider .box .content h3{
-    font-size: 2.5rem;
-    color:var(--black);
-}
-
-.vehicles .vehicles-slider .box .content .price{
-    font-size: 2.2rem;
-    color:var(--yellow);
-    padding:1rem 0;
-    font-weight: bolder;
-}
-
-.vehicles .vehicles-slider .box .content .price span{
-    color:var(--light-color);
+.carInfomartion>p{
     font-size: 1.5rem;
-    font-weight: normal;
+    margin:0rem 1rem 1rem 0rem;
+    color: #adabab;
 }
-
-.vehicles .vehicles-slider .box .content p{
-    font-size: 1.6rem;
-    color:var(--light-color);
-    padding: 1rem 0;
-    padding-top: 1.5rem;
-    border-top: var(--border);
-}
-
-.vehicles .vehicles-slider .box .content span{
-    font-size: 1rem;
-    color:var(--yellow);
-    padding:0 .5rem;
-}
-
-.swiper-pagination-bullet-active{
-    background: var(--yellow);
+.carInfomartion>p>span{
+    color: #6f6e6e;
+    font-size: 1.7rem;
+    margin-left: 6rem;
 }
 .footer{
-    background: var(--light-yellow);
+    margin-top:20rem;
+    background: var(--light-yellow);    
 }
 
 .footer .credit{
@@ -242,35 +186,50 @@ section{
 
 
 @media (max-width:991px){
-
     html{
         font-size: 55%;
     }
-
+    
     .header{
         padding:2rem;
     }
-
+    
     .header.active{
         padding:2rem;
     }
-
+    
     section{
         padding:2rem;
     }
-
+    .footer{
+        margin-top:30rem;   
+    }
+    .carCard{
+        width: 90%;
+    }
+    .carDetails>span:nth-of-type(1){
+        font-size: 2rem;
+    }
+    .carDetails>span:nth-of-type(2){
+        font-size: 1.7rem;
+    }
+    .carInfomartion>p{
+        font-size: 1.5rem;
+    }
+    .carInfomartion>p>span{
+        font-size: 1.7rem;
+    }
 }
 
-@media (max-width:768px){
-
+@media (max-width:774px){
     #menu-btn{
         display: block;
     }
-
+    
     #menu-btn.fa-times{
         transform:rotate(180deg);
     }
-
+    
     .header .navbar{
         position: absolute;
         top:99%; left:0; right:0;
@@ -278,27 +237,65 @@ section{
         border-top: var(--border);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-
+    
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-
+    
     .header .navbar a{
         margin:2rem;
         display: block;
         font-size: 2rem;
+    }    
+    .carCard{
+        width: 95%;
     }
-
+    .carCard img{
+        width: 100%;
+    }
+    .carDetails>span:nth-of-type(1){
+        font-size: 2rem;
+    }
+    .carDetails>span:nth-of-type(2){
+        font-size: 1.7rem;
+    }
+    .carInfomartion>p{
+        font-size: 1.5rem;
+    }
+    .carInfomartion>p>span{
+        font-size: 1.7rem;
+    }
 }
-
 @media (max-width:450px){
-
     html{
         font-size: 50%;
     }
-
+    
     .heading{
         font-size: 3rem;
     }
-
+    .footer{
+        margin-top:35rem;   
+    }
+    .carCard{
+        width: 90%;
+        flex-direction: column;
+        padding:1rem;
+    }
+    .carCard img{
+        width:100%;
+        height: 100%;
+    }
+    .carDetails>span:nth-of-type(1){
+        font-size: 2rem;
+    }
+    .carDetails>span:nth-of-type(2){
+        font-size: 1.7rem;
+    }
+    .carInfomartion>p{
+        font-size: 1.5rem;
+    }
+    .carInfomartion>p>span{
+        font-size: 1.7rem;
+    }
 }
