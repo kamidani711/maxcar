@@ -31,7 +31,6 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     top:0; left:0; right:0;
     padding:3rem 9%;
     z-index: 1000;
@@ -60,7 +59,7 @@ html{
 
 
 .header.active{
-    padding:2rem 9%;
+    padding:1rem 9%;
     box-shadow: var(--box-shadow);
 }
 
@@ -114,11 +113,16 @@ html{
 .searchDiv{
     margin-top: 10rem;
 }
-.carImagesMainSlider>h3{
+.carImagesMainSlider>h1{
 font-size: 2.5rem;
 color: var(--black);
 }
-
+.carImagesMainSlider .carImagesSlider {
+    height: 45vw;
+}
+.carImagesMainSlider .swiper-slide img{
+    width: 100%;
+}
 .carImagesSlider .swiper-button-prev {
     left: 30;
     color: var(--yellow)
@@ -129,7 +133,9 @@ color: var(--black);
 }
 .carImagesSliderThumbs {
     width: 60vw;
+    height: 5vw;
 }
+
 .carDetails {
     display: flex;
     flex-direction: column;
@@ -137,7 +143,7 @@ color: var(--black);
     align-items: flex-start;
     padding: 1vw;
 }
-.carDetails>h3 {
+.carDetails>h2 {
     margin-top:1vw;
     font-size: 2rem;
 }
@@ -159,7 +165,9 @@ color: var(--black);
     padding-left: 1rem;
     font-weight: 500;
 }
-
+.vehicle-description{
+    font-size: 1.5rem;
+}
 .footer{
     background: var(--light-yellow);
     margin-top: 1rem;
@@ -246,7 +254,7 @@ color: var(--black);
         align-items: center;
         gap: 1rem;
     }
-    .carImagesMainSlider>h3{
+    .carImagesMainSlider>h1{
         margin-left: 2rem; 
         }
     .carImagesMainSlider{
@@ -254,16 +262,17 @@ color: var(--black);
         }
         .carImagesMainSlider .carImagesSlider{
             width: 100%;
+            height: 75vw;
         }
         .carImagesMainSlider .carImagesSliderThumbs {
             width: 100%;
+            height: 10vw;
         }
-
            
     .carDetails {
         width: 100%;
     }
-    .carDetails>h3{
+    .carDetails>h2{
         padding-left: 1rem;
     }
     .textColorGray {

@@ -228,6 +228,19 @@ section{
 .swiper-pagination-bullet-active{
     background: var(--yellow);
 }
+
+.about-us{
+text-align: center;
+}
+.about-us>h2{
+font-size: 3rem;
+text-align: center;
+}
+
+.about-us>p{
+font-size: 2rem;
+text-align: center;
+}
 .footer{
     background: var(--light-yellow);
 }
@@ -294,7 +307,7 @@ section{
 @media (max-width:450px){
 
     html{
-        font-size: 50%;
+        font-size: 60%;
     }
 
     .heading{

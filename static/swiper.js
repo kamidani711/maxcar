@@ -15,4 +15,5 @@ var swiper = new Swiper(".carImagesSliderThumbs", {
     thumbs: {
       swiper: swiper,
     },
+    
   });
